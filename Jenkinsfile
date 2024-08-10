@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     tools {
-         terraform 'Terraform'
+         terraform 'terraform'
      }
 
     environment {
@@ -15,7 +15,7 @@ pipeline {
         stage('Git checkout from prod branch') {
             steps {
                 echo 'Cloning project codebase...'
-                git branch: 'main', url: 'https://github.com/effulgencetech/jenkins-terraform-delete.git'
+                git branch: 'main', url: 'https://github.com/ashleypearl-web/jenkins-terraform-infra-create.git'
                 sh 'ls'
             }
         }
